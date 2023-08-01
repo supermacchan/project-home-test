@@ -18,5 +18,10 @@
         "parcel-reporter-clean-dist": "^1.0.4",
         "posthtml-include": "^1.7.4"
     },
+    "parcel": {
+        "transformers": {
+          "*.html": ["@parcel/transformer-sass", "@parcel/transformer-posthtml"]
+        }
+    },
     "browserslist": "> 0.5%, last 2 versions, not dead"
 }
