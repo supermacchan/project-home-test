@@ -4,18 +4,19 @@
     "description": "",
     "homepage": "https://supermacchan.github.io/project-home-test",
     "scripts": {
-      "start": "parcel src/*.html",
-      "build": "parcel build src/*.html --public-url /project-home-test/"
+        "start": "parcel src/*.html",
+        "build": "parcel build src/*.html --public-url /project-home-test/"
     },
+    "keywords": [],
     "dependencies": {
-      "modern-normalize": "^1.1.0",
-      "notiflix": "^3.2.6"
+        "modern-normalize": "^1.1.0",
+        "notiflix": "^3.2.6"
     },
     "devDependencies": {
-      "@parcel/transformer-sass": "^2.6.0",
-      "parcel": "^2.6.0",
-      "parcel-reporter-clean-dist": "^1.0.4",
-      "posthtml-include": "^1.7.4"
+        "@parcel/transformer-sass": "^2.6.0",
+        "parcel": "^2.6.0",
+        "parcel-reporter-clean-dist": "^1.0.4",
+        "posthtml-include": "^1.7.4"
     },
     "browserslist": "> 0.5%, last 2 versions, not dead"
-  }
+}
