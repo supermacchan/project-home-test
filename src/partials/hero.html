@@ -1,18 +1,46 @@
 <section class="hero" id="hero">
-    <h1>Project Home</h1>
-    <div>  
-        <button type="button">назад</button>
-        <button type="button">вперед</button>
+    <div>
+        <h1 class="hero__title">Project 
+            <span class="hero__title-accent">Home</span>
+        </h1>
+        <div class="hero__buttons">  
+            <button type="button" class="hero__button">
+                <img 
+                    src="./images/svg/arrow-left.svg" 
+                    alt="back" 
+                    class="hero__icon"
+                />
+            </button>
+            <button type="button" class="hero__button">
+                <img 
+                    src="./images/svg/arrow-right.svg" 
+                    alt="forward"
+                    class="hero__icon"
+                />
+            </button>
+        </div>
+        
+        <div class="hero__pages">
+            <span class="hero__page">01</span>
+            <span class="hero__divider">
+                <img 
+                    src="./images/svg/line.svg" 
+                    alt="slash" 
+                />
+            </span>
+            <span class="hero__page">02</span>
+        </div>
     </div>
     
-    <div>
-        <span>1</span>
-        <span>/</span>
-        <span>2</span>
-    </div>
-    
-    <div>
-        <!-- <img src="" alt="" /> -->
-        <button type="button">Взглянуть</button>
+    <div class="hero__gallery">
+        <img src="./images/jpg/hero1.jpg" alt="gallery photo" class="hero__gallery-img" />
+        <button type="button" class="hero__gallery-button">
+            Взглянуть
+            <img 
+                src="./images/svg/arrow-right.svg" 
+                alt="forward"
+                class="hero__icon"
+            />
+        </button>
     </div>
 </section>
