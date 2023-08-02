@@ -1,0 +1,24 @@
+.up {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    z-index: 200;
+
+    padding: 0;
+    border: none;
+    border-radius: 50%;
+    background-color: transparent;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    animation: shine 2s infinite;
+
+    cursor: pointer;
+}
+
+.up__img {
+    width: 60px;
+    height: 60px;
+}

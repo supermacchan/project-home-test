@@ -1,0 +1,13 @@
+@keyframes shine {
+	0% {
+		box-shadow: 0 0 0 0 #00000079;
+	}
+
+	70% {
+		box-shadow: 0 0 0 15px rgba(238, 0, 111, 0);
+	}
+
+	100% {
+		box-shadow: 0 0 0 0 rgba(238, 0, 111, 0);
+	}
+}
