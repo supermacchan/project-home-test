@@ -1,0 +1,241 @@
+.contact {
+    @extend %section;
+    @extend %container;
+}
+
+.contact__title {
+    @extend %title;
+}
+
+.contact__content {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+
+    margin-top: 22px;
+    width: 100%;
+}
+
+.contact__form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    width: 391px;
+}
+
+.contact__info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.contact__input {
+    background-color: $form-fill;
+    border: none;
+
+    width: 100%;
+
+    padding: 15px 21px;
+
+    &::placeholder {
+        color: $title-text-color;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: 0.56px;
+    }
+}
+
+.contact__input-area {
+    background-color: $form-fill;
+    border: none;
+
+    width: 100%;
+
+    padding: 15px 21px;
+    min-height: 147px;
+
+    &::placeholder {
+        color: $title-text-color;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: 0.56px;
+    }
+}
+
+.contact__field {
+    position: relative;
+    max-height: 147px;
+}
+
+// --- required mark ---
+
+.contact__info input+label {
+    color: $title-text-color;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.56px;
+
+    position: absolute;
+    left: 21px;
+    top: 15px;
+}
+
+.contact__info textarea+label {
+    color: $title-text-color;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.56px;
+
+    position: relative;
+    left: 21px;
+    top: -135px;
+}
+  
+.contact__info input[required]+label:after,
+.contact__info textarea[required]+label:after {
+    content: '*';
+    color: red;
+}
+  
+/* show the placeholder when input has no content (no content = invalid) */
+.contact__info input[required]:invalid+label,
+.contact__info textarea[required]:invalid+label {
+    display: inline-block;
+}
+  
+  
+/* hide the placeholder when input has some text typed in */
+.contact__info input[required]:valid+label,
+.contact__info textarea[required]:valid+label {
+    display: none;
+}
+
+// ---
+
+.contact__image-container {
+    width: 749px;
+    height: 369px;
+}
+
+.contact__image {
+    object-fit: contain;
+}
+
+.contact__button {
+    cursor: pointer;
+
+    width: 222px;
+    height: 71px;
+
+    border: none;
+    background-color: $accent-text-color;
+
+    color: $light-text;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1; 
+    letter-spacing: 2.4px;
+    text-transform: uppercase;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+
+    transition: background-color $transition-time $transition-behavior;
+
+    &:hover,
+    &:focus {
+        background-color: $accent-color;
+    }
+}
+
+// --- custom policy checkbox ---
+
+.policy {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 11px;
+}
+
+.policy__check {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+.policy__agreement {
+    position: relative;
+
+    color: $accent-text-color;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.42px;
+
+    margin-left: 40px;
+}
+
+.policy__checkbox--empty {
+    width: 24px;
+    height: 24px;
+
+    position: absolute;
+    top: 0;
+    left: -40px;
+
+    visibility: visible;
+    opacity: 1;
+
+    transition: opacity 250ms $transition-behavior,
+        visibility 250ms $transition-behavior;
+
+    .policy__check:checked~.policy__agreement>& {
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    @media screen and (min-width: $desktop) {
+        top: 4px;
+    }
+}
+
+.policy__checkbox--filled {
+    width: 24px;
+    height: 24px;
+
+    position: absolute;
+    top: 0;
+    left: -40px;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition: opacity 250ms $transition-behavior,
+        visibility 250ms $transition-behavior;
+
+    .policy__check:checked~.policy__agreement>& {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    @media screen and (min-width: $desktop) {
+        top: 4px;
+    }
+}

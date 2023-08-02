@@ -1,13 +1,87 @@
 <section class="contact" id="contact">
-    <h2>Связаться с нами</h2>
-    <form>
-        <input type="text" name="name" />
-        <input type="tel" name="phone" />
-        <input type="email" name="email" />
-        <input type="text" name="service" />
-        <textarea></textarea>
-        <p>Отправляя заявку Вы соглашаетесь с политикой конфиденциальности</p>
-        <button type="submit">Отправить</button>
-    </form>
-    <!-- <img src="" alt="" /> -->
+    <h2 class="contact__title">Связаться с нами</h2>
+    <div class="contact__content">
+        <form class="contact__form">
+            <div class="contact__info">
+                <div class="contact__field">
+                    <input 
+                        type="text" 
+                        name="name" 
+                        id="name"
+                        placeholder="Имя"
+                        class="contact__input" 
+                    />
+                </div>
+                
+                <div class="contact__field">
+                    <input 
+                        type="tel" 
+                        name="phone" 
+                        id="phone"
+                        class="contact__input" 
+                        required
+                    />
+                    <label for="phone" class="contact__label">
+                        Номер телефона
+                    </label>
+                </div>
+    
+                <div class="contact__field">
+                    <input 
+                        type="text" 
+                        name="email" 
+                        id="email"
+                        class="contact__input" 
+                        required
+                    />
+                    <label for="email" class="contact__label">
+                        E-mail
+                    </label>
+                </div>
+    
+                <div class="contact__field">
+                    <input 
+                        type="text" 
+                        name="service" 
+                        id="service"
+                        placeholder="Интересующий товар/услуга"
+                        class="contact__input"
+                    />
+                </div>
+                
+                <div class="contact__field">
+                    <textarea 
+                        class="contact__input-area"
+                        name="message"
+                        id="message"
+                        required
+                    ></textarea>
+                    <label for="message" class="contact__label">
+                        Сообщение
+                    </label>
+                </div>
+            </div>
+
+            <div class="policy">
+                <input type="checkbox" class="policy__check" name="policy" id="policy" required>
+                <label for="policy" class="policy__agreement">
+                    <img src="./images/svg/unchecked.svg" alt="logo" class="policy__checkbox policy__checkbox--empty">
+                    <img src="./images/svg/checked.svg" alt="logo" class="policy__checkbox policy__checkbox--filled">
+                    Отправляя заявку Вы соглашаетесь с политикой конфиденциальности
+                </label>
+            </div>
+
+            <button type="submit" class="contact__button">
+                Отправить
+                <img 
+                    src="./images/svg/arrow.svg" 
+                    alt="forward"
+                    class="projects__icon"
+                />
+            </button>
+        </form>
+        <div class="contact__image-container">
+            <img src="./images/jpg/contact.jpg" alt="contact" class="contact__image" />
+        </div>
+    </div> 
 </section>
